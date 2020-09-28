@@ -9,11 +9,9 @@ const Index = () => {
   return (
     <main className="main">
       <ChatWrap>
-        <div className="chat-block">
-          <div className="home">
-            <h1 className="home-title">Hello ✋</h1>
-            <p>Select chat-bot in side panel and write something</p>
-          </div>
+        <div className="home">
+          <h1 className="home-title">Hello ✋</h1>
+          <p>Select chat-bot in side panel and write something</p>
         </div>
       </ChatWrap>
     </main>

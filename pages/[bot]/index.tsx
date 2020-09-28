@@ -13,11 +13,9 @@ import { GetServerSidePropsContext } from 'next';
 const BotChat = () => (
   <main className="main">
     <ChatWrap>
-      <div className="chat-block">
-        <div className="blocked-wrap">
-          <Chat />
-          <MessageForm />
-        </div>
+      <div className="blocked-wrap">
+        <Chat />
+        <MessageForm />
       </div>
     </ChatWrap>
   </main>
