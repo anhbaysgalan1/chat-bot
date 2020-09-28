@@ -8,10 +8,10 @@ type IProps = {
 
 const ChatWrap = ({ children }: IProps) => {
   return (
-    <div className='container'>
-      <div className='row chat-container'>
-        <div className='chat-col'>
-          <div className='chat-wrap'>
+    <div className="container">
+      <div className="row chat-container">
+        <div className="chat-col">
+          <div className="chat-wrap">
             <Sidebar />
             {children}
           </div>

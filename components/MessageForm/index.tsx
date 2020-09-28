@@ -35,19 +35,19 @@ const MessageForm = () => {
   };
 
   return (
-    <div className='chat-form'>
-      <form action='#' method='post' id='form'>
-        <div className='textarea-wrap'>
+    <div className="chat-form">
+      <form action="#" method="post" id="form">
+        <div className="textarea-wrap">
           <textarea
             value={text}
-            form='form'
-            placeholder='Text'
+            form="form"
+            placeholder="Text"
             onChange={handleInput}
             onKeyPress={hadleSubmit}
           />
         </div>
-        <div className='textarea-count-wrap'>
-          <div className='checkbox-wrap'>Press Enter to send</div>
+        <div className="textarea-count-wrap">
+          <div className="checkbox-wrap">Press Enter to send</div>
         </div>
       </form>
     </div>

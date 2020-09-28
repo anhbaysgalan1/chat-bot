@@ -18,10 +18,10 @@ const Chat = () => {
   const answer = useSelector<IState, boolean>((state: IState) => state.answer);
   const bots = useSelector<IState, IBots>((state: IState) => state.bots);
   const userImg = useSelector<IState, string>(
-    (state: IState) => state.user.img
+    (state: IState) => state.user.img,
   );
   const chat = useSelector<IState, IChat | null>(
-    (state: IState): IChat | null => state.chat
+    (state: IState): IChat | null => state.chat,
   );
 
   useEffect(() => {
@@ -34,7 +34,7 @@ const Chat = () => {
 
   return (
     <div style={{ position: 'relative' }}>
-      <div className='chat'>
+      <div className="chat">
         {answer && <Typing />}
 
         {chat &&
@@ -44,7 +44,7 @@ const Chat = () => {
             // item[0] -> time in miliseconds
             // item[1] -> { text: '...', who: '...' temp?: false }
             // temp -> temporary - show message with loader before it send to db
-            .map((item) => (
+            .map(item => (
               <Fragment key={item[0]}>
                 <div
                   className={
@@ -53,14 +53,14 @@ const Chat = () => {
                       : 'chat-message'
                   }
                 >
-                  <div className='chat-message-foto'>
+                  <div className="chat-message-foto">
                     <img
                       src={item[1].who === 'user' ? userImg : bots[bot]} // bots - { sherlok: 'img_path' } bot - sherlok
-                      alt=''
+                      alt=""
                     />
                   </div>
-                  <div className='chat-message-text'>{item[1].text}</div>
-                  <div className='chat-message-time'>
+                  <div className="chat-message-text">{item[1].text}</div>
+                  <div className="chat-message-time">
                     {formateDate(+item[0])}
                   </div>
                 </div>

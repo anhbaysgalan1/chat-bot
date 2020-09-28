@@ -11,10 +11,10 @@ import { IState, IStore } from '../../interfaces';
 import { GetServerSidePropsContext } from 'next';
 
 const BotChat = () => (
-  <main className='main'>
+  <main className="main">
     <ChatWrap>
-      <div className='chat-block'>
-        <div className='blocked-wrap'>
+      <div className="chat-block">
+        <div className="blocked-wrap">
           <Chat />
           <MessageForm />
         </div>
@@ -25,7 +25,7 @@ const BotChat = () => (
 
 export const getServerSideProps = wrapper.getServerSideProps(
   async (
-    context: GetServerSidePropsContext & { store: IStore }
+    context: GetServerSidePropsContext & { store: IStore },
   ): Promise<void> => {
     const state: IState = context.store.getState();
 
@@ -41,7 +41,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
     }
 
     await context.store.sagaTask.toPromise();
-  }
+  },
 );
 
 export default BotChat;

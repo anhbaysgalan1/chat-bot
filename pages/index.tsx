@@ -7,11 +7,11 @@ import { IStore } from '../interfaces';
 
 const Index = () => {
   return (
-    <main className='main'>
+    <main className="main">
       <ChatWrap>
-        <div className='chat-block'>
-          <div className='home'>
-            <h1 className='home-title'>Hello ✋</h1>
+        <div className="chat-block">
+          <div className="home">
+            <h1 className="home-title">Hello ✋</h1>
             <p>Select chat-bot in side panel and write something</p>
           </div>
         </div>
@@ -25,7 +25,7 @@ export const getStaticProps = wrapper.getStaticProps(
     store.dispatch({ type: types.GET_BOTS_START });
     store.dispatch(END);
     await store.sagaTask.toPromise();
-  }
+  },
 );
 
 export default Index;
