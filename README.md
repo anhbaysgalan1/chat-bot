@@ -18,7 +18,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Description
 
-Each of the five bots responds with random phrases 1 - 5 seconds after your message. Answer sets for each bot  
+Each of the five bots responds with random phrases 1 - 5 seconds after your message.
 It was planned that the robots would respond with phrases with this API ```https://alexwohlbruck.github.io/cat-facts/docs/```  
 But it seems there are some server issues right now for these free API  
 So if cat-facts api respond with error, robots respond with such phrases:  
