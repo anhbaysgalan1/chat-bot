@@ -7,7 +7,7 @@ const formateDate = (ms: number): string => {
   if (diferent > 60 && diferent < 3600)
     return `${Math.ceil(diferent / 3600)} minuts ago`; // 3600 - seconds in hour
   if (diferent > 3600 && diferent < 86400)
-    return `${Math.ceil(diferent / 86400)} hours ago`; // 2880 - seconds in a day
+    return `${Math.ceil(diferent / 86400)} hours ago`; // 86400 - seconds in a day
   if (diferent < 86400) {
     const date: Date = new Date(ms);
     return `${addZeroToNumber(date.getDate())}.${addZeroToNumber(
