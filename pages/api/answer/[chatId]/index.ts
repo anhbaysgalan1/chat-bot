@@ -14,14 +14,14 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         if (status < 200 || status >= 300)
           throw new Error('Something went wrong');
         db.ref(`message/${req.query.chatId}/${time}`).set(
-          { text: data.message, who: 'bot' },
+          { text: data.text, who: 'bot' },
           (error) => {
             if (error) {
               res.status(500).json({ message: 'Internal Server Error' });
             } else {
               res
                 .status(200)
-                .json({ [time]: { text: data.message, who: 'bot' } });
+                .json({ [time]: { text: data.text, who: 'bot' } });
             }
           }
         );

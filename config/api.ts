@@ -1,9 +1,9 @@
 import axios, { AxiosResponse } from 'axios';
 
 axios.defaults.baseURL =
-  process.env.NODE_ENV !== 'production'
-    ? process.env.DEV_URL
-    : process.env.PROD_URL;
+  process.env.NODE_ENV === 'production'
+    ? process.env.PROD_URL
+    : process.env.DEV_URL;
 
 export interface IApi {
   bots: {
